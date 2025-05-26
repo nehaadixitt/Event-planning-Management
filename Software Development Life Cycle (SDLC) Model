@@ -1,0 +1,142 @@
+Software Development Life Cycle (SDLC) 
+Selected SDLC Model: 
+Agile + Spiral Model Hybrid
+
+This project combines the Agile methodology for iterative development with elements of the Spiral Model to manage risks and refine the system progressively.
+
+Phase 1: 
+Planning and Requirement Gathering
+-Primary Users
+The system was designed to cater to:
+Event Organizers: Users who plan events and need a digital way to manage them.
+Attendees: Users who receive tickets and need updates regarding events.
+Admin (self): For testing and managing data through the local storage system.
+
+-Requirements Collection
+To understand the users’ needs:
+I conducted a competitive analysis of basic event management apps.
+Created a checklist of core features such as user login, event creation/editing, ticket generation, and responsive design.
+
+-Finalized Requirements
+Functional:
+User Registration/Login
+Event Creation, Viewing, Editing, Deletion
+
+Ticket Generation
+Pop-up Confirmation Messages
+
+Non-Functional:
+Mobile Responsiveness
+
+Local Storage Persistence
+Fast Load Time (lightweight, no backend)
+
+-Tools & Technology Stack
+Frontend: HTML, CSS, JavaScript
+Collaboration & Versioning: GitHub
+Design & Planning: Figma (for mockups), Google Docs (for documentation)
+
+-Project Management Approach
+Adopted Scrum with weekly sprints and stand-up logs.
+Used Trello to manage tasks and sprint boards.
+Created a Work Breakdown Structure (WBS) to decompose the project into manageable tasks.
+
+
+Phase 2: Design
+-UI Wireframes & Prototypes
+I created low-fidelity wireframes using Figma before starting development.
+Layout included a homepage, login/registration forms, and an event dashboard.
+
+-UI/UX Design
+Color palette: light background with vibrant CTA buttons (green/orange).
+Fonts: Sans-serif for readability.
+Designed layouts to be mobile-friendly using media queries and Flexbox.
+
+-Architecture Planning
+The app was built in modules:
+Auth Module (login/register)
+Event Module (CRUD)
+Ticket Module (generate/view ticket)
+Navigation was kept minimal: landing page > dashboard > event actions
+
+-Data Model
+Data was stored in browser local storage using JSON.
+
+A typical event object included:
+
+js
+{
+  id: 1,
+  title: "Annual Tech Meet",
+  date: "2025-06-10",
+  location: "Main Auditorium",
+  description: "A seminar for emerging tech trends",
+  ticketsIssued: true
+}
+
+
+Phase 3: Implementation (Agile Sprints)
+-Sprint 1: Project Setup & Authentication
+Initialized GitHub repo and basic HTML/CSS structure.
+Developed login and registration forms using vanilla JS.
+Stored user credentials in local storage (note: hashed passwords not implemented due to scope).
+-Sprint 2: Event CRUD & Data Persistence
+Implemented event creation form with validation.
+Displayed events dynamically on the dashboard.
+Enabled edit and delete functions using event IDs.
+All event data was stored and retrieved from local storage.
+
+- Sprint 3: Ticketing & Responsive UI
+Developed a “Generate Ticket” button that created a virtual ticket view.
+Used CSS media queries and Flexbox for responsive layout.
+Ensured mobile compatibility across common screen sizes.
+
+-Sprint 4: Pop-ups, Testing & UI Polish
+Implemented JavaScript pop-ups for form submissions and actions.
+Cleaned codebase and refactored functions for maintainability.
+Added loading indicators and styled feedback messages.
+
+
+Phase 4: Testing
+-Functional Testing
+Manually tested:
+User registration/login
+Event creation, updates, deletions
+Ticket rendering
+Verified edge cases like empty fields and invalid inputs.
+
+-Compatibility Testing
+Tested the site on Chrome, Firefox, and Edge.
+Verified layout responsiveness on mobile (iPhone 13 simulator) and tablet.
+
+-Bug Tracking and Resolution
+Logged bugs using Trello cards.
+Resolved 5+ issues including:
+1) Misaligned ticket layout on mobile
+2) Event deletion not updating DOM properly
+
+
+Phase 5: Deployment and Maintenance
+-Final Deployment
+Hosted the project on GitHub and tested live on browser.
+Shared the GitHub link in documentation for demo access.
+
+-User Documentation
+Created a README with usage instructions and screenshots.
+Added inline comments in the code for maintainability.
+
+-Feedback and Future Scope
+Collected informal peer feedback.
+Future scope includes:
+Backend integration with Firebase or Node.js
+Email-based ticketing
+User profile management
+
+Spiral Model Integration
+| Iteration | Focus Area          | Risks Identified              | Resolution                           |
+| --------- | ------------------- | ----------------------------- | ------------------------------------ |
+| 1st       | Authentication      | Risk of unsecure credentials  | Used local storage with warnings     |
+| 2nd       | CRUD Logic          | Risk of broken update/delete  | Implemented unique ID system         |
+| 3rd       | Ticket System       | Layout misalignment on mobile | Responsive CSS testing and fixes     |
+| 4th       | UI Polish & Testing | Data loss in rare cases       | Improved JSON parsing and save logic |
+
