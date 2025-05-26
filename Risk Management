@@ -1,0 +1,15 @@
+Risk Management
+
+| Risk ID | Risk Description                                | Likelihood | Impact | Mitigation Strategy                          |
+| ------- | ----------------------------------------------- | ---------- | ------ | -------------------------------------------- |
+| R1      | Browser local storage limit                     | Medium     | High   | Shift to backend or IndexedDB if data grows  |
+| R2      | Incomplete input validation                     | Medium     | Medium | Implement JS validation & alerts             |
+| R3      | Mobile responsiveness issues                    | High       | High   | Use flex/grid layouts; test on devices       |
+| R4      | Git merge conflicts (solo or team)              | Low        | Medium | Commit regularly, maintain clean branches    |
+| R5      | Time constraints in final sprint                | High       | High   | Buffer time in Sprint 4 for polish & testing |
+| R6      | Pop-up notification not showing in all browsers | Medium     | Low    | Cross-browser testing                        |
+
+Risk Monitoring Plan
+-Weekly Review: Risk review during sprint retrospectives
+-Issue Tracker: Log bugs and blockers in Trello/Jira
+-Fallback Mechanisms: Optional backup storage options, UI alternatives
