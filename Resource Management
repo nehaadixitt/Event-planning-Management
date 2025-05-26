@@ -1,0 +1,24 @@
+Resource Management 
+Team Roles and Responsibilities
+| Role               | Team Member         | Responsibilities                                                |
+| ------------------ | ------------------- | --------------------------------------------------------------- |
+| **Product Owner**  | Neha Dixit          | Defines requirements, prioritizes backlog, accepts deliverables |
+| **Scrum Master**   | Neha Dixit          | Facilitates Scrum events, removes blockers                      |
+| **Frontend Dev**   | Neha Dixit          | Implements UI and logic (HTML, CSS, JS)                         |
+| **UI/UX Designer** | Neha Dixit          | Designs responsive, intuitive interfaces                        |
+| **QA Tester**      | Neha Dixit          | Conducts testing, bug tracking, performance checks              |
+
+Tools and Platforms
+-GitHub – Version control and collaboration
+-Trello / Jira – Sprint planning and task tracking
+-VS Code – Code editor
+-Canva / Figma – UI/UX mockups 
+
+Work Allocation per Sprint
+| Sprint | Focus Areas                                 | Resource Allocation          |
+| ------ | ------------------------------------------- | ---------------------------- |
+| 1      | Setup, login/authentication                 | Product Owner, Frontend Dev  |
+| 2      | Event CRUD, local storage                   | Frontend Dev, UI/UX Designer |
+| 3      | Ticketing, responsive design                | Frontend Dev, QA Tester      |
+| 4      | Testing, feedback integration, finalization | QA Tester, All roles         |
+
