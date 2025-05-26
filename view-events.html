@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Events</title>
+    <style>
+        body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: url('event.avif') no-repeat center center/cover, #36a2a2;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start; /* Corrected from 'top' */
+      height: 135vh;
+    }
+
+
+        .container {
+            width: 800px;
+            background-color: #edbb5d;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .container h1 {
+            font-size: 32px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .event-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .event-list li {
+            background-color: #c7a901;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            padding: 15px;
+            text-align: left;
+        }
+
+        .event-list li h3 {
+            margin: 0;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .event-list li p {
+            margin: 5px 0;
+            color: #555;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #f0eee9;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #ffa200;
+            transition: background-color 0.3s ease;
+            margin: 10px;
+        }
+
+        button:hover {
+            background-color: #ffa200;
+        }
+
+        .button-group {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        footer {
+            background-color: #edbb5d;
+            color: rgb(46, 37, 37);
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        footer a {
+            color: #33007a;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>View Events</h1>
+    <ul id="event-list" class="event-list">
+    </ul>
+    <div class="button-group">
+        <button onclick="window.location.href='event-create.html'">Add Event</button>
+        <button onclick="window.location.href='index.html'">Home</button>
+    </div>
+</div>
+
+<script>
+    function loadEvents() {
+        const eventList = document.getElementById('event-list');
+        eventList.innerHTML = '';
+
+        const events = JSON.parse(localStorage.getItem('events')) || [];
+
+        events.forEach(event => {
+            const listItem = document.createElement('li');
+            listItem.innerHTML = `
+                <h3>${event.name}</h3>
+                <p><strong>Date:</strong> ${event.date}</p>
+                <p><strong>Location:</strong> ${event.location}</p>
+                <p><strong>Description:</strong> ${event.description}</p>
+                <button onclick="editEvent('${event.name}')">Edit</button>
+                <button onclick="deleteEvent('${event.name}')">Delete</button>
+            `;
+            eventList.appendChild(listItem);
+        });
+    }
+
+    function editEvent(eventName) {
+        alert('Edit functionality is not implemented.');
+    }
+
+    function deleteEvent(eventName) {
+        let events = JSON.parse(localStorage.getItem('events')) || [];
+        events = events.filter(event => event.name !== eventName);
+        localStorage.setItem('events', JSON.stringify(events));
+        loadEvents();
+    }
+
+    window.onload = loadEvents;
+</script>
+
+</body>
+<footer>
+    <p>Designed by <a href="https://www.linkedin.com/in/nehadixit2004/" target="_blank">NEHA DIXIT</a></p>
+</footer>
+</html>
