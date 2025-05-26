@@ -1,0 +1,37 @@
+Project Duration: 4 Weeks
+Sprint Duration: 1 Week
+Team Roles:
+
+Product Owner: Defines features (Neha Dixit)
+
+Scrum Master: Ensures Scrum processes are followed
+
+Development Team: Frontend Developer, UI/UX Designer, QA Tester
+
+| Feature                   | Description                      |
+| ------------------------- | -------------------------------- |
+| User Registration & Login | Secure user authentication       |
+| Create Event              | Form to input event data         |
+| Edit/Delete Event         | Update or remove existing events |
+| View Event List           | Display all saved events         |
+| Ticketing System          | Generate/view tickets            |
+| Pop-up Alerts             | Notify users after actions       |
+| Responsive Design         | Mobile + desktop adaptability    |
+| Data Storage              | Use browser's local storage      |
+
+Sprint Planning:
+Sprint 1:
+-Setup HTML/CSS structure
+-Implement Registration/Login
+
+Sprint 2:
+-CRUD operations for events
+-Local storage integration
+
+Sprint 3:
+-Ticket generation module
+-Responsive UI styling
+
+Sprint 4:
+-Testing and bug fixing
+-Polish UI and pop-up notifications
