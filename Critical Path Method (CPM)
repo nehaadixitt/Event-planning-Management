@@ -1,0 +1,20 @@
+Critical Path Method (CPM)
+Task Dependencies and Durations
+
+| ID | Task                      | Duration | Depends On |
+| -- | ------------------------- | -------- | ---------- |
+| A  | Setup Project & Tools     | 1 day    | —          |
+| B  | Authentication Module     | 2 days   | A          |
+| C  | Event CRUD                | 3 days   | B          |
+| D  | Ticket System             | 2 days   | C          |
+| E  | Local Storage Integration | 1 day    | C          |
+| F  | Pop-ups + Responsive UI   | 2 days   | D, E       |
+| G  | Testing & Debugging       | 2 days   | F          |
+| H  | Finalization & Docs       | 1 day    | G          |
+
+Critical Path
+A → B → C → D → F → G → H
+Total Duration: 12 working days
+
+E (Local Storage) is not on the critical path but runs parallel to D. Delay in E can only affect F.
+
