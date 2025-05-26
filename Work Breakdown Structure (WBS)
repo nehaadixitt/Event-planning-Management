@@ -1,0 +1,31 @@
+Work Breakdown Structure (WBS)
+1. Planning
+   1.1 Requirement Analysis
+   1.2 Tech Stack Finalization
+   1.3 Task & Timeline Planning
+
+2. Design
+   2.1 Wireframes (Low-fidelity)
+   2.2 UI Styling (CSS)
+
+3. Development
+   3.1 Setup Project Structure
+   3.2 Implement Authentication
+   3.3 Event CRUD Functionality
+   3.4 Ticketing System
+   3.5 Pop-up Notification System
+   3.6 Responsive Design
+
+4. Data Handling
+   4.1 Configure Local Storage
+
+5. Testing
+   5.1 Functional Testing
+   5.2 UI/UX Testing
+   5.3 Bug Fixing
+
+6. Documentation & Deployment
+   6.1 User Manual
+   6.2 Project Report
+   6.3 GitHub Repo Finalization
+
