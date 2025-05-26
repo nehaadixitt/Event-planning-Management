@@ -1,5 +1,5 @@
 
-# Event Management System
+# Event Planning/Management System
 
 A comprehensive Event Management System built with HTML, CSS, and JavaScript, designed to handle user registration, login, and event ticketing. This system allows users to register, log in, create, edit, and manage events, and store data locally.
 
